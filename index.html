@@ -12,14 +12,13 @@
 
   <style>
     :root{
-      --navy: #0b2239;
-      --navy2:#081a2c;
-      --beige:#f3e2b3;
-      --beige2:#e9d49c;
-      --ink:#06121f;
+      --navy: #13424b;
+      --navy2:#023947;
+      --beige:#f1ead0;
+      --beige2:#e3c78d;
+      --ink:#032a33;
       --glass: rgba(255,255,255,.06);
       --stroke: rgba(243,226,179,.22);
-      --shadow: 0 18px 50px rgba(0,0,0,.45);
       --radius: 18px;
     }
 
@@ -30,7 +29,7 @@
       margin:0;
       color:var(--beige);
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 70% 10%, #123a5c 0%, var(--navy) 45%, var(--navy2) 100%);
+      background: radial-gradient(1200px 800px at 70% 10%, #13424b 0%, var(--navy) 45%, var(--navy2) 100%);
       overflow:hidden;
     }
 
@@ -71,13 +70,7 @@
     }
 
     .card{
-      width:min(520px, 92vw);
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border:1px solid var(--stroke);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
-      backdrop-filter: blur(10px);
+      width:min(400px, 92vw);
     }
 
     .title{
@@ -96,114 +89,114 @@
       font-size: 16px;
       line-height: 1.35;
     }
-
-    .divider{
-      height:1px;
-      background: linear-gradient(90deg, transparent, rgba(243,226,179,.45), transparent);
-      margin: 16px 0 18px;
+    
+    .logo{
+      display:flex;
+      margin: auto;
     }
 
-    .btn{
+    .btn-primary{
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:14px;
+      justify-content:center;
+      gap:20px;
       width:100%;
       text-decoration:none;
-      background: linear-gradient(180deg, var(--beige), var(--beige2));
+      background: var(--beige2);
       color: var(--ink);
       padding: 16px 16px;
-      border-radius: 14px;
-      font-weight: 800;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 500;
       border:1px solid rgba(0,0,0,.15);
-      box-shadow: 0 10px 24px rgba(0,0,0,.25);
       transition: transform .12s ease, box-shadow .12s ease;
-      margin-top: 12px;
+      margin-top: 50px;
     }
 
-    .btn:active{ transform: translateY(1px); }
+    .btn-primary:hover{
+      background: #E3BF76;
+    }  
+
+    .btn-primary:active{
+      background: #E3BF76;
+    }   
+
+    .btn-secondary{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:20px;
+      width:100%;
+      text-decoration:none;
+      background: var(--beige);
+      color: var(--ink);
+      padding: 16px 16px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 500;
+      border:1px solid rgba(0,0,0,.15);
+      transition: transform .12s ease, box-shadow .12s ease;
+      margin-top: 16px;
+    }
+    
+    .btn-secondary:hover{
+      background: #F1E5B7;
+    }  
+
+    .btn-secondary:active{
+      background: #F1E5B7;
+    } 
 
     .btn small{
       font-weight: 650;
       opacity: .78;
     }
 
-    .arrow{
-      font-size: 18px;
-      opacity:.75;
-    }
-
     .meta{
-      display:flex;
-      gap:10px;
+      text-align: center;
       flex-wrap:wrap;
-      margin-top: 14px;
-      opacity:.75;
-      font-size: 12px;
-    }
-
-    .pill{
-      border:1px solid rgba(243,226,179,.22);
-      background: rgba(255,255,255,.05);
-      padding: 6px 10px;
-      border-radius: 999px;
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--beige);
     }
 
     .foot{
-      margin-top: 16px;
-      opacity: .72;
-      font-size: 12px;
+      margin-top: 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
       line-height: 1.35;
+      color: var(--beige2);
     }
 
-    /* Optional tiny anchor mark */
-    .mark{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      opacity:.9;
-      margin-bottom: 6px;
-    }
-    .mark svg{ opacity:.85; }
   </style>
 </head>
 
 <body>
   <div class="wrap">
     <main class="card" role="main" aria-label="To the Bottom rules">
-      <div class="mark">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 3v12" stroke="rgba(243,226,179,.9)" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M8 8h8" stroke="rgba(243,226,179,.9)" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M6 14c0 3 2.5 7 6 7s6-4 6-7" stroke="rgba(243,226,179,.9)" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M9 18l-3 3M15 18l3 3" stroke="rgba(243,226,179,.9)" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <span style="font-size:12px; letter-spacing:1px;">RULES</span>
-      </div>
 
-      <h1 class="title">TO THE BOTTOM</h1>
-      <p class="tagline">A game of sinking odds and rising tension</p>
+      <img class="logo"
+        src="TotheBottomLogo.svg"
+        alt="to the bottom deckbuilding game"
+        height="244"
+        width="300" />
 
-      <div class="divider"></div>
-
-      <!-- Update filenames here if needed -->
-      <a class="btn" href="To%20the%20bottom%20Rules.pdf">
-        <span>English Rules<br><small>PDF</small></span>
-        <span class="arrow">›</span>
+      <a class="btn-primary" href="To%20the%20bottom%20Rules.pdf">
+        <span>English Rules</span>
       </a>
 
-      <a class="btn" href="To%20the%20bottom%20Rules_CZ.pdf">
-        <span>Česká pravidla<br><small>PDF</small></span>
-        <span class="arrow">›</span>
+      <a class="btn-secondary" href="To%20the%20bottom%20Rules_CZ.pdf">
+        <span>Česká pravidla</span>
       </a>
 
       <div class="meta">
-        <span class="pill">Deck-building card game</span>
-        <span class="pill">Author: Jakub Jedlinský</span>
+        On mobile, tap once to open the PDF file with rules, then use your reader’s search or bookmarks.
       </div>
 
       <div class="foot">
-        Tip: on mobile, tap once to open the PDF, then use your reader’s search or bookmarks.
+        Author: Jakub Jedlinský
       </div>
     </main>
   </div>
